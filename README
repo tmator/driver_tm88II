@@ -1,0 +1,8 @@
+CUPS USB DRIVER FOR TM88II EPSON THERMAL PRINTER
+
+- compile filter
+- copy filter in cups filter folder (/usr/lib/cups/filter/ on debian)
+- add "FileDevice Yes" in cupsd.conf
+- restart cups
+- add printer via cups
+- choose LPR host, in uri file:/dev/usb/lpX (dmesg to get X)

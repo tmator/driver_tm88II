@@ -1,0 +1,152 @@
+*PPD-Adobe:             "4.3"
+*FormatVersion:         "4.3"
+*FileVersion:           "1.1"
+*LanguageVersion:       English
+*LanguageEncoding:      ISOLatin1
+*PCFileName:            "CBM1000.ppd"
+*Manufacturer:          "CITIZEN"
+*Product:               "(CBM1000)"
+*1284DeviceID:          "MFG:Citizen;CMD:CITIZEN;MDL:CBM1000;CLS:PRINTER;"
+*cupsVersion:           1.1
+*cupsManualCopies:      True
+*cupsModelNumber:       1000
+*cupsFilter:            "application/vnd.cups-raster 0 rastertocbm1k"
+*ModelName:             "CBM1000"
+*ShortNickName:         "CBM1000"
+*NickName:              "CITIZEN CBM1000"
+*PSVersion:             "(3010.000) 550"
+*LanguageLevel:         "3"
+*ColorDevice:           False
+*DefaultColorSpace: Gray
+*FileSystem:            False
+*Throughput:            "1"
+*LandscapeOrientation:  Plus90
+*VariablePaperSize:     True
+*TTRasterizer:          Type42
+
+*OpenUI *PageSize/Media Size: PickOne
+*OrderDependency: 10 AnySetup *PageSize
+*DefaultPageSize: X80MMY120MM
+
+*%PageSize Custom/Custom:                       "<</PageSize[0 0]/HWResolution[203 203]/ImagingBBox null>>setpagedevice"
+
+*% 50.8mm wide page size note
+*% 50.8mm = 2.0in * 72 = 144 points
+*% use 143 points to cause 5.0 point difference with 52.5mm paper and help CUPS matching algorithm
+*% see CUPS src - gdevcups.c - search "find matching page size"
+*PageSize X80MMY80MM/80mm * 80mm:              "<</PageSize[226 226]/HWResolution[203 203]/ImagingBBox null>>setpagedevice"
+*PageSize X80MMY90MM/80mm * 90mm:              "<</PageSize[226 255]/HWResolution[203 203]/ImagingBBox null>>setpagedevice"
+*PageSize X80MMY100MM/80mm * 100mm:            "<</PageSize[226 283]/HWResolution[203 203]/ImagingBBox null>>setpagedevice"
+*PageSize X80MMY110MM/80mm * 110mm:            "<</PageSize[226 311]/HWResolution[203 203]/ImagingBBox null>>setpagedevice"
+*PageSize X80MMY120MM/80mm * 120mm:            "<</PageSize[226 340]/HWResolution[203 203]/ImagingBBox null>>setpagedevice"
+*PageSize X80MMY130MM/80mm * 130mm:            "<</PageSize[226 368]/HWResolution[203 203]/ImagingBBox null>>setpagedevice"
+*PageSize X80MMY140MM/80mm * 140mm:            "<</PageSize[226 396]/HWResolution[203 203]/ImagingBBox null>>setpagedevice"
+*PageSize X80MMY150MM/80mm * 150mm:            "<</PageSize[226 425]/HWResolution[203 203]/ImagingBBox null>>setpagedevice"
+*PageSize X80MMY160MM/80mm * 160mm:            "<</PageSize[226 453]/HWResolution[203 203]/ImagingBBox null>>setpagedevice"
+*PageSize X80MMY170MM/80mm * 170mm:            "<</PageSize[226 481]/HWResolution[203 203]/ImagingBBox null>>setpagedevice"
+*PageSize X80MMY180MM/80mm * 180mm:            "<</PageSize[226 510]/HWResolution[203 203]/ImagingBBox null>>setpagedevice"
+*PageSize X80MMY190MM/80mm * 190mm:            "<</PageSize[226 538]/HWResolution[203 203]/ImagingBBox null>>setpagedevice"
+
+*% Zoom resolution calculation note
+*% Printer real width = 72mm = 576 dots
+*% Printer real resolution = 203dpi
+*% Rendering resolution = floor(576 dots / (8.23in * (1 - zoom)))
+*% 69 = floor(576 / (8.23 * (1 - 0)))
+*% 139 = floor(576 / (8.23 * (1 - .5)))
+*CloseUI: *PageSize
+
+*OpenUI *PageRegion: PickOne
+*OrderDependency: 10 AnySetup *PageRegion
+*DefaultPageRegion: X80MMY120MM
+
+*%PageRegion Custom/Custom:                         "<</PageSize[0 0]/HWResolution[203 203]/ImagingBBox null>>setpagedevice"
+*PageRegion X80MMY80MM/80mm * 80mm:              "<</PageSize[226 226]/HWResolution[203 203]/ImagingBBox null>>setpagedevice"
+*PageRegion X80MMY90MM/80mm * 90mm:              "<</PageSize[226 255]/HWResolution[203 203]/ImagingBBox null>>setpagedevice"
+*PageRegion X80MMY100MM/80mm * 100mm:            "<</PageSize[226 283]/HWResolution[203 203]/ImagingBBox null>>setpagedevice"
+*PageRegion X80MMY110MM/80mm * 110mm:            "<</PageSize[226 311]/HWResolution[203 203]/ImagingBBox null>>setpagedevice"
+*PageRegion X80MMY120MM/80mm * 120mm:            "<</PageSize[226 340]/HWResolution[203 203]/ImagingBBox null>>setpagedevice"
+*PageRegion X80MMY130MM/80mm * 130mm:            "<</PageSize[226 368]/HWResolution[203 203]/ImagingBBox null>>setpagedevice"
+*PageRegion X80MMY140MM/80mm * 140mm:            "<</PageSize[226 396]/HWResolution[203 203]/ImagingBBox null>>setpagedevice"
+*PageRegion X80MMY150MM/80mm * 150mm:            "<</PageSize[226 425]/HWResolution[203 203]/ImagingBBox null>>setpagedevice"
+*PageRegion X80MMY160MM/80mm * 160mm:            "<</PageSize[226 453]/HWResolution[203 203]/ImagingBBox null>>setpagedevice"
+*PageRegion X80MMY170MM/80mm * 170mm:            "<</PageSize[226 481]/HWResolution[203 203]/ImagingBBox null>>setpagedevice"
+*PageRegion X80MMY180MM/80mm * 180mm:            "<</PageSize[226 510]/HWResolution[203 203]/ImagingBBox null>>setpagedevice"
+*PageRegion X80MMY190MM/80mm * 190mm:            "<</PageSize[226 538]/HWResolution[203 203]/ImagingBBox null>>setpagedevice"
+
+*CloseUI: *PageRegion
+
+*DefaultImageableArea: X80MMY120MM
+
+*%ImageableArea Custom:              "0.0 0.0 0.0 0.0"
+*ImageableArea X80MMY80MM:          "0.0 0.0 226.0 226.0"
+*ImageableArea X80MMY90MM:          "0.0 0.0 226.0 255.0"
+*ImageableArea X80MMY100MM:         "0.0 0.0 226.0 283.0"
+*ImageableArea X80MMY110MM:         "0.0 0.0 226.0 311.0"
+*ImageableArea X80MMY120MM:         "0.0 0.0 226.0 340.0"
+*ImageableArea X80MMY130MM:         "0.0 0.0 226.0 368.0"
+*ImageableArea X80MMY140MM:         "0.0 0.0 226.0 396.0"
+*ImageableArea X80MMY150MM:         "0.0 0.0 226.0 425.0"
+*ImageableArea X80MMY160MM:         "0.0 0.0 226.0 453.0"
+*ImageableArea X80MMY170MM:         "0.0 0.0 226.0 481.0"
+*ImageableArea X80MMY180MM:         "0.0 0.0 226.0 510.0"
+*ImageableArea X80MMY190MM:         "0.0 0.0 226.0 538.0"
+
+
+*DefaultPaperDimension: X80MMY120MM
+
+*%PaperDimension Custom:             "0 0"
+*PaperDimension X80MMY80MM:         "226 226"
+*PaperDimension X80MMY90MM:         "226 255"
+*PaperDimension X80MMY100MM:        "226 283"
+*PaperDimension X80MMY110MM:        "226 311"
+*PaperDimension X80MMY120MM:        "226 340"
+*PaperDimension X80MMY130MM:        "226 368"
+*PaperDimension X80MMY140MM:        "226 396"
+*PaperDimension X80MMY150MM:        "226 425"
+*PaperDimension X80MMY160MM:        "226 453"
+*PaperDimension X80MMY170MM:        "226 481"
+*PaperDimension X80MMY180MM:        "226 510"
+*PaperDimension X80MMY190MM:        "226 538"
+
+*MaxMediaWidth:  "226"
+*MaxMediaHeight: "5670"
+*HWMargins:      0 0 0 0
+*CustomPageSize True: "pop pop pop <</PageSize[5 -2 roll]/HWResolution[203 203]/ImagingBBox null>>setpagedevice"
+*ParamCustomPageSize Width:        1 points 72 226
+*ParamCustomPageSize Height:       2 points 72 5670
+*ParamCustomPageSize WidthOffset:  3 points 0 0
+*ParamCustomPageSize HeightOffset: 4 points 0 0
+*ParamCustomPageSize Orientation:  5 int 0 0
+
+*OpenGroup: DrawerGroup/Drawer Options
+*OpenUI *CashDrawer/Drawer Type: PickOne
+*DefaultCashDrawer: 0NoDrawer
+*CashDrawer 0NoDrawer/No Drawer: ""
+*CashDrawer 1Drawer1/Drawer (#2): ""
+*CashDrawer 2Drawer2/Drawer (#5): ""
+*CloseUI: *CashDrawer
+
+*OpenUI *CashDrawerPulseWidth/Drawer Pulse Width: PickOne
+*DefaultCashDrawerPulseWidth: 3DrawerPulse200
+*CashDrawerPulseWidth 0DrawerPulse50/50 ms: ""
+*CashDrawerPulseWidth 1DrawerPulse100/100 ms: ""
+*CashDrawerPulseWidth 2DrawerPulse150/150 ms: ""
+*CashDrawerPulseWidth 3DrawerPulse200/200 ms: ""
+*CashDrawerPulseWidth 4DrawerPulse250/250 ms: ""
+*CashDrawerPulseWidth 5DrawerPulse300/300 ms: ""
+*CashDrawerPulseWidth 6DrawerPulse350/350 ms: ""
+*CashDrawerPulseWidth 7DrawerPulse400/400 ms: ""
+*CashDrawerPulseWidth 8DrawerPulse450/450 ms: ""
+*CashDrawerPulseWidth 9DrawerPulse500/500 ms: ""
+*CloseUI: *CashDrawerPulseWidth
+*CloseGroup: DrawerGroup
+
+*OpenGroup: CutGroup/Cut Options
+*OpenUI *PageCutType/Page Cut Type: PickOne
+*DefaultPageCutType: 2EndOfPage
+*PageCutType 0NoCutPage/No Cut: ""
+*PageCutType 1EndOfDoc/End Of Document: ""
+*PageCutType 2EndOfPage/End Of Each Page: ""
+*CloseUI: *PageCutType
+*CloseGroup: CutGroup
+*% End
